@@ -16,5 +16,12 @@ namespace TSStringAverage.Tests
             TSStringAverage sa = new TSStringAverage();
             Assert.AreEqual("n/a", sa.StringAverage(""));
         }
+
+        [TestMethod]
+        public void StringContainsGreaterThan9_Should_ReturnNA()
+        {
+            TSStringAverage sa = new TSStringAverage();
+            Assert.AreEqual("n/a", sa.StringAverage("ten"));
+        }
     }
 }
