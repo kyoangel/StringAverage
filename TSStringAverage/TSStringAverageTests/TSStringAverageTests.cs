@@ -22,10 +22,21 @@ namespace TSStringAverage.Tests
             TestStringAverageWithExpectedAndActual("n/a", "ten");
         }
 
+        [TestMethod]
+        public void StringWithOneNumString_Should_ReturnItself()
+        {
+            TestStringAverageWithExpectedAndActual("one", "one");
+            TestStringAverageWithExpectedAndActual("two", "two");
+            TestStringAverageWithExpectedAndActual("four", "four");
+            TestStringAverageWithExpectedAndActual("seven", "seven");
+            TestStringAverageWithExpectedAndActual("nine", "nine");
+        }
+
+
         private static void TestStringAverageWithExpectedAndActual(string expected, string actual)
         {
             TSStringAverage sa = new TSStringAverage();
-            Assert.AreEqual("n/a", sa.StringAverage(""));
+            Assert.AreEqual(expected, sa.StringAverage(actual));
         }
     }
 }
