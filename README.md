@@ -1,0 +1,2 @@
+# StringAverage
+Codewars kata practice
