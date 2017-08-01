@@ -6,10 +6,14 @@ using System.Threading.Tasks;
 
 namespace TSStringAverage
 {
-    public class Class1
+    public class TSStringAverage
     {
-        public string StringAverage()
+        public string StringAverage(string str)
         {
+            if (string.IsNullOrWhiteSpace(str))
+            {
+                return "n/a";
+            }
             return string.Empty;
         }
     }
