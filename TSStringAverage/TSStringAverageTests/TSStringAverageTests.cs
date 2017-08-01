@@ -13,15 +13,19 @@ namespace TSStringAverage.Tests
         [TestMethod()]
         public void EmptyString_Should_ReturnNA()
         {
-            TSStringAverage sa = new TSStringAverage();
-            Assert.AreEqual("n/a", sa.StringAverage(""));
+            TestStringAverageWithExpectedAndActual("n/a", "");
         }
 
         [TestMethod]
         public void StringContainsGreaterThan9_Should_ReturnNA()
         {
+            TestStringAverageWithExpectedAndActual("n/a", "ten");
+        }
+
+        private static void TestStringAverageWithExpectedAndActual(string expected, string actual)
+        {
             TSStringAverage sa = new TSStringAverage();
-            Assert.AreEqual("n/a", sa.StringAverage("ten"));
+            Assert.AreEqual("n/a", sa.StringAverage(""));
         }
     }
 }
