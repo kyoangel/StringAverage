@@ -32,6 +32,18 @@ namespace TSStringAverage.Tests
             TestStringAverageWithExpectedAndActual("nine", "nine");
         }
 
+        [TestMethod]
+        public void CodewarsKataStandarTestCase()
+        {
+            TestStringAverageWithExpectedAndActual("four", "zero nine five two");
+            TestStringAverageWithExpectedAndActual("three", "four six two three");
+            TestStringAverageWithExpectedAndActual("three", "one two three four five");
+            TestStringAverageWithExpectedAndActual("four", "five four");
+            TestStringAverageWithExpectedAndActual("zero", "zero zero zero zero zero");
+            TestStringAverageWithExpectedAndActual("two", "one one eight one");
+            TestStringAverageWithExpectedAndActual("n/a", "");
+        }
+
 
         private static void TestStringAverageWithExpectedAndActual(string expected, string actual)
         {
